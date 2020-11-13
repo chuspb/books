@@ -4,7 +4,10 @@ Sample Spring Boot project to demonstrate docker and docker-compose capabilities
 - books.dist: It contains the info to package the app
 
 ## How to compile:
+```bash
 mvn clean install -DskipTests -Pbooks\[.dev|.demo\]
+mvn clean compile -f books.dist/pom.xml -Dbuild.compose.file -Pbooks\[.dev|.demo\] 
+```
 
 ## How to build and run everything without docker-compose:
 ```bash

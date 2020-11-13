@@ -10,10 +10,10 @@ services:
         condition: service_healthy
     healthcheck:
       test: curl -sS http://127.0.0.1:8080/books/healthcheck || exit 1
-      start_period: 120s
-      interval: 30s
+      start_period: 30s
+      interval: 5s
       timeout: 5s
-      retries: 3
+      retries: 10
     networks: 
       - books-dev-network
   ${dbserver}:
